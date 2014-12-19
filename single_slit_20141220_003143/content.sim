@@ -1,0 +1,33 @@
+# Format: McStas with text headers scan step file. Use mcplot/PGPLOT to view.
+# URL:    http://www.mccode.org/
+# Editor: pengfei on localhost
+# Creator:test (/Users/pengfei/github/Monte_Carlo/single_slit.instr) simulation (McXtrace 1.1 - May. 31, 2013)
+# Date:   Simulation started (1419006796) Sat Dec 20 00:33:16 2014
+# File:   content.sim
+# Ncount: 1e+08
+# Trace: no
+# Gravitation: no
+# Seed: 1419006703
+# Param: Par1=1
+# type: multiarray_1d(1)
+# Source: /Users/pengfei/github/Monte_Carlo/single_slit.instr
+# component: test
+# position: 0 0 0
+# title: Monitor integrated counts
+# Ncount: 1e+08
+# filename: content.sim
+# format: McStas with text headers scan step
+# statistics: 
+# signal: Min=-0.390694; Max=3.90263e-07; Mean=-0.0976734;
+# values: -0.390694 0.112784 4
+# xvars: Index
+# yvars:  corhen_psd_abs_I corhen_psd_abs_Err  corhen_psd_arg_I corhen_psd_arg_Err 
+# xlabel: Monitors
+# ylabel: I
+# zvar: I
+# zlabel: Integrated Signal
+# xlimits: 0 3
+# variables: I
+# Data [content_sim/content.sim] I: 
+3.68109522362e-11 1.99052320824e-11 -0.390694152296 3.90263496528e-07 
+# EndDate:Sat Dec 20 00:33:16 2014
