@@ -52,18 +52,18 @@ COMPONENT Origin = Progress_bar()
 
 
 COMPONENT point1 = Source_pt(
-focus_xw = 0.01, focus_yh = 0.01, dist = 2, E0 = 20)
+focus_xw = 0.01, focus_yh = 0.01, dist = 0.024, E0 = 0.0025)
   AT (0, 0, 0) RELATIVE Origin
 
 
 COMPONENT slit = Slit(
-    xwidth = 0.0001, yheight = 0.0001)
-  AT (0, 0, 0.2) RELATIVE Origin
+    xwidth = 0.1, yheight = 0.1)
+  AT (0, 0, 0.002) RELATIVE Origin
 
 COMPONENT cor = PSD_monitor_coh(
-    nx = 90, ny = 90, filename = "corhen.psd", xwidth = 0.9,
-    yheight = 0.9)
-  AT (0, 0, 1) RELATIVE slit
+    nx = 700, ny = 700, filename = "corhen", xwidth = 0.008,
+    yheight = 0.008)
+  AT (0, 0, 0.02) RELATIVE slit
 
 
 
@@ -82,5 +82,7 @@ FINALLY
 %}
 /* The END token marks the instrument definition end */
 END
+
+
 
 

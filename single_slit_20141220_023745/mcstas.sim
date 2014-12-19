@@ -1,0 +1,79 @@
+Format: McStas with text headers file. Use mcplot/PGPLOT to view.
+URL:    http://www.mccode.org/
+Editor: pengfei on localhost
+Creator:test (/Users/pengfei/github/Monte_Carlo/single_slit.instr) simulation (McXtrace 1.1 - May. 31, 2013)
+Date:   Simulation started (1419014372) Sat Dec 20 02:39:32 2014
+File:   mcstas
+begin instrument
+  name: test
+  parent: /Users/pengfei/github/Monte_Carlo/single_slit_20141220_023745/mcstas
+  Parameters:  Par1(double)
+  Source: /Users/pengfei/github/Monte_Carlo/single_slit.instr
+  Trace_enabled: yes
+  Default_main: yes
+  Embedded_runtime: yes
+end instrument
+begin simulation
+  name: mcstas
+  parent: /Users/pengfei/github/Monte_Carlo/single_slit_20141220_023745/mcstas
+  Ncount: 1e+08
+  Trace: no
+  Gravitation: no
+  Seed: 1419014265
+  Param: Par1=1
+end simulation
+begin component
+  name: cor
+  parent: /Users/pengfei/github/Monte_Carlo/single_slit_20141220_023745/mcstas
+  begin data
+    name: corhen.abs
+    parent: cor
+    type: array_2d(700, 700)
+    Source: /Users/pengfei/github/Monte_Carlo/single_slit.instr
+    component: cor
+    position: 0 0 0.022
+    title: PSD monitor
+    Ncount: 1e+08
+    filename: corhen.abs
+    format: McStas with text headers
+    statistics: X0=1.42901e-06; dX=0.00204026; Y0=1.54548e-06; dY=0.00204044;
+    signal: Min=1.63154e-13; Max=2.55251e-08; Mean=1.97876e-09;
+    values: 0.000969591 1.15589e-06 7.61641e+07
+    xvar: X 
+    yvar: Y 
+    xlabel: X position [m]
+    ylabel: Y position [m]
+    zvar: I
+    zlabel: Signal per bin
+    xylimits: -0.004 0.004 -0.004 0.004
+    variables: I I_err N
+  end data
+end component
+begin component
+  name: cor
+  parent: /Users/pengfei/github/Monte_Carlo/single_slit_20141220_023745/mcstas
+  begin data
+    name: corhen.arg
+    parent: cor
+    type: array_2d(700, 700)
+    Source: /Users/pengfei/github/Monte_Carlo/single_slit.instr
+    component: cor
+    position: 0 0 0.022
+    title: PSD monitor
+    Ncount: 1e+08
+    filename: corhen.arg
+    format: McStas with text headers
+    statistics: X0=0.00333144; dX=0; Y0=0.000752621; dY=0.00252674;
+    signal: Min=-3.14159; Max=3.14159; Mean=-0.0037415;
+    values: -1833.34 2.40709e-05 7.61641e+07
+    xvar: X 
+    yvar: Y 
+    xlabel: X position [m]
+    ylabel: Y position [m]
+    zvar: I
+    zlabel: Signal per bin
+    xylimits: -0.004 0.004 -0.004 0.004
+    variables: I I_err N
+  end data
+end component
+EndDate:Sat Dec 20 02:39:34 2014

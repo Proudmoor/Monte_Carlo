@@ -2,7 +2,7 @@
  * Format:     ANSI C source code
  * Creator:    McXtrace <http://www.mcxtrace.org>
  * Instrument: /Users/pengfei/github/Monte_Carlo/single_slit.instr (test)
- * Date:       Sat Dec 20 00:27:36 2014
+ * Date:       Sat Dec 20 02:36:49 2014
  * File:       /Users/pengfei/github/Monte_Carlo/single_slit.c
  */
 
@@ -8102,8 +8102,8 @@ MCNUM mccslit_focus_x0;
 MCNUM mccslit_focus_y0;
 
 /* Definition parameters for component 'cor' [4]. */
-#define mcccor_nx 90
-#define mcccor_ny 90
+#define mcccor_nx 700
+#define mcccor_ny 700
 /* Setting parameters for component 'cor' [4]. */
 char mcccor_filename[16384];
 MCNUM mcccor_restore_xray;
@@ -8373,11 +8373,11 @@ void mcinit(void) {
 #line 45 "/Users/pengfei/github/Monte_Carlo/single_slit.instr"
   mccpoint1_flux = 0;
 #line 55 "/Users/pengfei/github/Monte_Carlo/single_slit.instr"
-  mccpoint1_dist = 2;
+  mccpoint1_dist = 0.024;
 #line 45 "/Users/pengfei/github/Monte_Carlo/single_slit.instr"
   mccpoint1_gamma = 0;
 #line 55 "/Users/pengfei/github/Monte_Carlo/single_slit.instr"
-  mccpoint1_E0 = 20;
+  mccpoint1_E0 = 0.0025;
 #line 45 "/Users/pengfei/github/Monte_Carlo/single_slit.instr"
   mccpoint1_dE = 0;
 #line 45 "/Users/pengfei/github/Monte_Carlo/single_slit.instr"
@@ -8408,7 +8408,7 @@ void mcinit(void) {
 #line 61 "/Users/pengfei/github/Monte_Carlo/single_slit.instr"
       0,
 #line 61 "/Users/pengfei/github/Monte_Carlo/single_slit.instr"
-      0.2);
+      0.002);
 #line 8412 "/Users/pengfei/github/Monte_Carlo/single_slit.c"
     rot_transpose(mcrotaOrigin, mctr1);
     mctc2 = rot_apply(mctr1, mctc1);
@@ -8435,9 +8435,9 @@ void mcinit(void) {
 #line 51 "/Users/pengfei/github/Monte_Carlo/single_slit.instr"
   mccslit_cut = 0;
 #line 60 "/Users/pengfei/github/Monte_Carlo/single_slit.instr"
-  mccslit_xwidth = 0.0001;
+  mccslit_xwidth = 0.1;
 #line 60 "/Users/pengfei/github/Monte_Carlo/single_slit.instr"
-  mccslit_yheight = 0.0001;
+  mccslit_yheight = 0.1;
 #line 51 "/Users/pengfei/github/Monte_Carlo/single_slit.instr"
   mccslit_dist = 0;
 #line 51 "/Users/pengfei/github/Monte_Carlo/single_slit.instr"
@@ -8466,7 +8466,7 @@ void mcinit(void) {
 #line 66 "/Users/pengfei/github/Monte_Carlo/single_slit.instr"
       0,
 #line 66 "/Users/pengfei/github/Monte_Carlo/single_slit.instr"
-      1);
+      0.02);
 #line 8470 "/Users/pengfei/github/Monte_Carlo/single_slit.c"
     rot_transpose(mcrotaslit, mctr1);
     mctc2 = rot_apply(mctr1, mctc1);
@@ -8481,7 +8481,7 @@ void mcinit(void) {
   /* Setting parameters for component cor. */
   SIG_MESSAGE("cor (Init:SetPar)");
 #line 64 "/Users/pengfei/github/Monte_Carlo/single_slit.instr"
-  if("corhen.psd") strncpy(mcccor_filename,"corhen.psd", 16384); else mcccor_filename[0]='\0';
+  if("corhen") strncpy(mcccor_filename,"corhen", 16384); else mcccor_filename[0]='\0';
 #line 50 "/Users/pengfei/github/Monte_Carlo/single_slit.instr"
   mcccor_restore_xray = 0;
 #line 50 "/Users/pengfei/github/Monte_Carlo/single_slit.instr"
@@ -8493,9 +8493,9 @@ void mcinit(void) {
 #line 50 "/Users/pengfei/github/Monte_Carlo/single_slit.instr"
   mcccor_ymax = 0.05;
 #line 64 "/Users/pengfei/github/Monte_Carlo/single_slit.instr"
-  mcccor_xwidth = 0.9;
+  mcccor_xwidth = 0.008;
 #line 65 "/Users/pengfei/github/Monte_Carlo/single_slit.instr"
-  mcccor_yheight = 0.9;
+  mcccor_yheight = 0.008;
 #line 8499 "/Users/pengfei/github/Monte_Carlo/single_slit.c"
 
   /* Component initializations. */
